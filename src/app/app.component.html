@@ -1,8 +1,46 @@
-<div class="main">
+<div class="fundo">
+  <div class="col-12 text-right btn-dark-mode"><i class="fas fa-adjust fa-2x" (click)="darkMode()"></i></div>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-6 text-center image-center">
-        <img class="img-fluid" src="assets/images/construction.png">
+      <div class="col-lg-8 col-md-10 col-11 shadow interface">
+        <div class="row">
+          <div class="text-center shadow menu" [ngClass]="{'col-sm-2 col-3': !mostrarMenu, 'd-none': mostrarMenu}">
+            <div class="row">
+              <div class="item-menu">
+                <i class="fas fa-2x fa-user-circle"></i>
+                <br><span class="text-item-menu">PERFIL</span>
+              </div>
+              <div class="item-menu">
+                <i class="fas fa-2x fa-graduation-cap"></i>
+                <br><span class="text-item-menu">STUDIES</span>
+              </div>
+              <div class="item-menu">
+                <i class="fas fa-2x fa-briefcase"></i>
+                <br><span class="text-item-menu">WORKS</span>
+              </div>
+              <div class="item-menu">
+                <i class="fas fa-2x fa-code"></i>
+                <br><span class="text-item-menu">CODES</span>
+              </div>
+              <div class="item-menu">
+                <i class="fas fa-2x fa-mail-bulk"></i>
+                <br><span class="text-item-menu">CONTACTS</span>
+              </div>
+            </div>
+          </div>
+          <div class="main" [ngClass]="{'col-sm-10 col-9': !mostrarMenu, 'col-12': mostrarMenu}">
+            <div class="row">
+              <div class="col-12 menu-superior">
+                <i class="fas fa-2x btn-toggle" (click)="toggle()"
+                  [ngClass]="{'fa-toggle-on': !mostrarMenu, 'fa-toggle-off': mostrarMenu}"></i>
+              </div>
+              <div class="col-12 conteudo">
+                <!-- <img src="assets/images/foto.jpg" class=""> -->
+                <span class="teste"><h1>a</h1></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

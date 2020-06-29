@@ -1,8 +1,105 @@
-.main{
+@import "src/styles.scss";
+
+.fundo {
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background-color: #192227;
+    overflow: hidden;
 }
-.image-center{
-    top: 40vh;
+.btn-dark-mode {
+    position: absolute;
+    margin-top: 15px;
+    color: #263238;
+    cursor: pointer;
+}
+.btn-dark-mode:hover {
+    color: rgba(255, 255, 255, 0.2);
+}
+.interface {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 80vh;
+    background-color: #263238;
+    border-radius: 5px;
+}
+
+.menu {
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #192227;
+    border-radius: 5px;
+    // QUANDO ADICIONAR MAIS ITEM REMOVER
+    // display: flex;
+    // align-items: center;
+}
+
+.menu::-webkit-scrollbar {
+    width: 10px;
+}
+
+.menu::-webkit-scrollbar-track {
+    background: #263238;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background: #19222744;
+}
+
+.menu::-webkit-scrollbar-thumb:hover {
+    background: #192227;
+}
+.item-menu {
+    color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+.item-menu:hover {
+    color: #192227;
+}
+
+.text-item-menu {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.btn-toggle {
+    color: #192227;
+    cursor: pointer;
+}
+.btn-toggle:hover {
+    color: rgba(255, 255, 255, 0.2);
+}
+.main {
+    height: 80vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.menu-superior {
+    height: 34px;
+}
+.conteudo {
+    height: calc(80vh - 34px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.conteudo::-webkit-scrollbar {
+    width: 10px;
+}
+
+.conteudo::-webkit-scrollbar-track {
+    background: #263238;
+}
+
+.conteudo::-webkit-scrollbar-thumb {
+    background: #19222744;
+}
+
+.conteudo::-webkit-scrollbar-thumb:hover {
+    background: #192227;
+}
+.teste{
+    color: $vermelho;
 }

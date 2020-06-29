@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  mostrarMenu = false
+
+  toggle() {
+    this.mostrarMenu = !this.mostrarMenu;
+  }
+  darkMode(){
+
+  }
 }
