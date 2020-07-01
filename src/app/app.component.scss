@@ -1,30 +1,23 @@
-@import "src/styles.scss";
-
 .fundo {
     height: 100vh;
     width: 100vw;
     background-color: #192227;
     overflow: hidden;
 }
-.btn-dark-mode {
-    position: absolute;
-    margin-top: 15px;
-    color: #263238;
-    cursor: pointer;
-}
-.btn-dark-mode:hover {
-    color: rgba(255, 255, 255, 0.2);
-}
+
 .interface {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    height: 80vh;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: calc(100vh - 30px);
     background-color: #263238;
     border-radius: 5px;
+    // @media (max-width: 575.98px) {
+        
+    // }
 }
 
 .menu {
-    height: 80vh;
+    height: calc(100vh - 30px);
     overflow-y: auto;
     overflow-x: hidden;
     border: 1px solid #192227;
@@ -49,19 +42,30 @@
 .menu::-webkit-scrollbar-thumb:hover {
     background: #192227;
 }
+
 .item-menu {
     color: rgba(255, 255, 255, 0.2);
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 0;
     cursor: pointer;
+    border: 1px solid transparent;
 }
+
 .item-menu:hover {
     color: #192227;
+    text-decoration: none;
+}
+
+.item-menu-active{
+    color: #192227;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #192227;
+    border-radius: 5px;
 }
 
 .text-item-menu {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
 }
 
@@ -69,9 +73,11 @@
     color: #192227;
     cursor: pointer;
 }
+
 .btn-toggle:hover {
     color: rgba(255, 255, 255, 0.2);
 }
+
 .main {
     height: 80vh;
     overflow-y: hidden;
@@ -81,8 +87,8 @@
     height: 34px;
 }
 .conteudo {
-    height: calc(80vh - 34px);
-    overflow-y: scroll;
+    height: calc(100vh - 64px);
+    overflow-y: auto;
     overflow-x: hidden;
 }
 .conteudo::-webkit-scrollbar {
@@ -99,7 +105,4 @@
 
 .conteudo::-webkit-scrollbar-thumb:hover {
     background: #192227;
-}
-.teste{
-    color: $vermelho;
 }
