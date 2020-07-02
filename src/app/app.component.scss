@@ -1,7 +1,4 @@
-$bgLight: #263238;
-$bgDark: #192227;
-$textLight: rgba(255, 255, 255, 0.5);
-$textDark: rgba(255, 255, 255, 0.2);
+@import "src/styles.scss";
 
 .main {
     height: 100vh;
@@ -33,7 +30,7 @@ $textDark: rgba(255, 255, 255, 0.2);
 }
 
 .menu-item:hover {
-color: $textLight;
+    color: $textLight;
 }
 
 .menu-item-active {
@@ -45,7 +42,8 @@ color: $textLight;
     font-weight: bold;
 }
 
-.content{
-    height: calc(100vh - 30px - 78px);
+.content {
+    height: calc(100vh - 108px);
     overflow: hidden;
+    padding-bottom: 15px;
 }
