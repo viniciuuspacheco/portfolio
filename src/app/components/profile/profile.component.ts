@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  efeito = false;
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }
 
+  rotacionar() {
+    this.efeito = !this.efeito;
+  }
 }
