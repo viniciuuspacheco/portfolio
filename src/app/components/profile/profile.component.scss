@@ -1,21 +1,124 @@
 @import "src/styles.scss";
 
-.profile{
-  height: 100%;
-  width: 100%;
+.profile {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  height: calc(100% - 15px);
+  width: calc(100% - 30px);
+  background-color: whitesmoke;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  align-items: center;
+  overflow-y: auto;
+
+  @media (min-height: 540px) {
+    display: flex;
+  }
+
+  // EFEITO
+  -webkit-animation: appear 1s ease 0s 1 normal;
+  -moz-animation: appear 1s ease 0s 1 normal;
+  -ms-animation: appear 1s ease 0s 1 normal;
+  animation: appear 1s ease 0s 1 normal;
 }
 
-.profile-foto{
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
-  border-radius: 1000px;
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
 }
 
-.profile-nome{
-  font-size: 15px;
+.profile::-webkit-scrollbar {
+  width: 10px;
+}
+
+.profile::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.profile::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.profile::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.profile-foto {
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.profile-foto:hover {
+  -webkit-animation: zoom-in-out 1.7s linear 0s 1 normal;
+  -moz-animation: zoom-in-out 1.7s linear 0s 1 normal;
+  -ms-animation: zoom-in-out 1.7s linear 0s 1 normal;
+  animation: zoom-in-out 1.7s linear 0s 1 normal;
+}
+
+@-webkit-keyframes zoom-in-out {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom-in-out {
+  0% {
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.profile-textos {
+  align-items: center;
+  display: flex;
+}
+
+.profile-assinatura {
+  font-family: "Permanent Marker", cursive;
+  font-size: 200%;
+  color: black;
+}
+
+.profile-subtitulo {
+  font-size: 60%;
   font-weight: bold;
+  color: black;
 }
-
-.profile-subtitle{
-  font-size: 8px;
-}
-
