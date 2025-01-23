@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      // Redireciona para a página principal mantendo a URL atual
-      var path = window.location.pathname.split("/").slice(2).join("/");
-      window.location.replace("/portfolio/index.html?redirect=/" + path);
+      window.location.replace("/?" + document.location.pathname);
     </script>
   </head>
   <body>
