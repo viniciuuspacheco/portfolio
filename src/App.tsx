@@ -3,6 +3,7 @@ import "./App.scss";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import "./styles/global.scss";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -10,9 +11,8 @@ function App() {
       <Header />
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} /> */}
+          <Route path={"/portfolio"} element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </div>
